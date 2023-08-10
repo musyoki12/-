@@ -114,3 +114,6 @@ const Settings = () => {
 };
 
 export default Settings;
+
+git config --global user.email "vincenbryaniel@gmail.com"
+git config --global user.name "Brian Musyoki"
