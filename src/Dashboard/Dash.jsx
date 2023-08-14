@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Dashhome() {
+function Dash() {
   return (
     <div>
          {/* Main content goes here */}
@@ -61,4 +61,4 @@ function Dashhome() {
   )
 }
 
-export default Dashhome
+export default Dash
