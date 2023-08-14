@@ -5,6 +5,7 @@ import Account from "./Account"
 import { Router, Route, Routes } from "react-router-dom";
 import Settings from './Settings';
 import Dashhome from './Dash';
+import Security from './Security';
 
 const MainContent = () => {
   return (
@@ -18,6 +19,7 @@ const MainContent = () => {
         <Route path="/account" element={<Account />} />
         <Route path="/report" element={<Report />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/security" element={<Security />} />
         </Routes>
       </div>
     </div>

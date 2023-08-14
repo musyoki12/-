@@ -2,13 +2,18 @@
 import React,{useState} from 'react';
 import prof from "./profi2.jpeg"
 import Security from './Security';
+import Settings from './Settings';
+import { Link } from 'react-router-dom';
+
 
 const Account = () => {
     const [activeTab, setActiveTab] = useState('profile'); // 'profile', 'security', or 'settings'
 
     const handleTabClick = (tab) => {
       setActiveTab(tab);
+
     }
+    const profile = '<div>'
   return (
     <div className="max-w-lg mx-auto p-4">
       <h1 className="text-2xl font-semibold mb-4">Profile</h1>
@@ -54,26 +59,27 @@ const Account = () => {
         </a>
       </li>
       <li className="mr-6 pb-2">
-        <a
-          href="#security"
-          className={`${
-            activeTab === 'security' ? 'text-blue-500 font-semibold' : 'text-gray-600 hover:text-blue-500'
-          }`}
-          onClick={() => handleTabClick('security')}
-        >
-          Security
-        </a>
+      <Link
+  to="/security"
+  className={`${
+    activeTab === 'settings' ? 'text-blue-500 font-semibold' : 'text-gray-600 hover:text-blue-500'
+  }`}
+  onClick={() => handleTabClick('settings')}
+>
+  Security
+</Link>
       </li>
       <li className="mr-6 pb-2">
-        <a
-          href="#settings"
-          className={`${
-            activeTab === 'settings' ? 'text-blue-500 font-semibold' : 'text-gray-600 hover:text-blue-500'
-          }`}
-          onClick={() => handleTabClick('settings')}
-        >
-          Settings
-        </a>
+      <Link
+  to="/settings"
+  className={`${
+    activeTab === 'settings' ? 'text-blue-500 font-semibold' : 'text-gray-600 hover:text-blue-500'
+  }`}
+  onClick={() => handleTabClick('settings')}
+>
+  Settings
+</Link>
+
       </li>
       </ul>
       </div>
